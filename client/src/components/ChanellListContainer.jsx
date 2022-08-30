@@ -5,6 +5,7 @@ import Cookies from 'universal-cookie';
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview} from './';
 import HospitalIcon from '../assets/hospital.png'
+import LogoutIcon from '../assets/logout.png'
 
 const SideBar = () =>  (
   <div className='channel-list__sidebar'>
@@ -22,12 +23,23 @@ const SideBar = () =>  (
     </div>
     
   </div>
+);
+
+const CompanyHeader = () => (
+  <div className='channel-list__header'> 
+   <p className='channel-list__header__text'> Medical Pager </p>
+  </div>
 )
 
 const ChanellListContainer = () => {
   return (
-    <div>ChanellListContainer</div>
-  )
+    <>
+      <SideBar/>
+      <div className='channel-list__list__wrapper'> 
+      <CompanyHeader  />
+      </div>
+    </>
+  );
 }
 
 export default ChanellListContainer
