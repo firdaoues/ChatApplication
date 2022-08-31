@@ -37,6 +37,7 @@ const ChanellListContainer = () => {
       <SideBar/>
       <div className='channel-list__list__wrapper'> 
       <CompanyHeader  />
+      <ChannelSearch />
       </div>
     </>
   );
