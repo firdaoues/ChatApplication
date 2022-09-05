@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors');
  
-const authRoutes = require('./routes/auth.js');
+const authRoutes = require("./routes/auth.js");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 require('dotenv').config();
 
@@ -15,6 +15,8 @@ app.use(express.urlencoded);
 app.get('/', (req, res) => {
     res.send('Welcome' );
 });
+
+app.use('/auth', authRoutes);
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
 
